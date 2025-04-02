@@ -1,0 +1,82 @@
+/* Global Style */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3e); /* Dark, subtle gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Calculator Container */
+.calculator {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Output Screen */
+#output-screen {
+    grid-column: span 4;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Button Style */
+.button {
+    height: 60px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+    border: none;
+    border-radius: 15px; /* Rounded buttons */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4),
+                inset 0 3px 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Equal Button Special Style */
+.equal {
+    grid-column: span 2;
+    height: 60px;
+    width: 100%; /* Ensures full span width */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+    color: white;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.equal:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5),
+                inset 0 4px 8px rgba(255, 255, 255, 0.4);
+}
